@@ -5,6 +5,7 @@ group "com.github.brunodles"
 
 install {
     repositories.mavenInstaller {
+        pom.groupId="com.github.brunodles"
         pom.version=rootProject.file("version").text
         pom.artifactId="environmentmods-processor"
     }
