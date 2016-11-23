@@ -15,6 +15,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: rootProject.file(releaseDir).toURI())
+            pom.artifactId="environmentmods-annotation"
         }
     }
 }
