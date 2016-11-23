@@ -14,7 +14,7 @@ install {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: rootProject.file('repo').toURI())
+            repository(url: rootProject.file(releaseDir).toURI())
         }
     }
 }

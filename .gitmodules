@@ -1,0 +1,4 @@
+[submodule "releases"]
+	path = releases
+	url = git@github.com:brunodles/EnvironmentMods.git
+	branch = releases
