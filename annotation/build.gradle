@@ -2,12 +2,20 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 group "com.github.brunodles"
+version rootProject.file("version").text
 
 install {
     repositories.mavenInstaller {
-        pom.groupId="com.github.brunodles"
         pom.version=rootProject.file("version").text
         pom.artifactId="environmentmods-annotation"
+    }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: rootProject.file('repo').toURI())
+        }
     }
 }
 
