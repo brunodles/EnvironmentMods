@@ -8,7 +8,12 @@ import com.github.brunodles.environmentmods.annotation.ModFor;
 public class StethoMod {
 
     @ModFor(Application.class)
-    public static void addStetho(Application application){
+    public static void addStetho(Application application) {
+
+    }
+
+    @ModFor(Application.class)
+    public static void addDbAnalyse(Application application) {
 
     }
 }

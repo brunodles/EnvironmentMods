@@ -1,13 +1,24 @@
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
 
-group "com.github.brunodles"
-version rootProject.file("version").text
+group maven.group
+version maven.version
 
 install {
     repositories.mavenInstaller {
-        pom.version=rootProject.file("version").text
+        pom.version=maven.version
         pom.artifactId="environmentmods-annotation"
+        pom.project {
+            name "$maven.name Annotations"
+            url maven.site
+            scm {
+                connection maven.git
+                developerConnection maven.git
+                url maven.git
+            }
+        }
     }
 }
 
@@ -20,6 +31,59 @@ uploadArchives {
     }
 }
 
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            groupId maven.group
+            artifactId "environmentmods-annotation"
+            version maven.version
+        }
+    }
+}
+
+bintray {
+    if (project.hasProperty("bintray.user") && project.hasProperty("bintray.apikey")) {
+        user = project.property("bintray.user")
+        key = project.property("bintray.apikey")
+    } else {
+        logger.info('Bintray user/apikey not found')
+    }
+    publications = ['MyPublication']
+
+    configurations = ['archives']
+    pkg {
+        repo = maven.repo
+        name = "environmentmods-annotation"
+//        userOrg = maven.name
+        websiteUrl = maven.site
+        vcsUrl = maven.git
+        licenses = ["mit"]
+        publish = true
+        version {
+            name = maven.version
+            released = new Date()
+            vcsTag = maven.tag
+        }
+    }
 }

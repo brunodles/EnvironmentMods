@@ -23,8 +23,10 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    provided project(':annotation')
-    apt project(':processor')
+//    provided project(':annotation')
+//    apt project(':processor')
+    provided 'com.github.brunodles:environmentmods-annotation:0.1.0'
+    apt 'com.github.brunodles:environmentmods-processor:0.1.0'
 
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.0.1'
