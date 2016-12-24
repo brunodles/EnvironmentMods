@@ -1,6 +1,7 @@
-package com.github.brunodles.environmentmods;
+package com.brunodles.environmentmods;
 
-import com.github.brunodles.environmentmods.annotation.Moddable;
+
+import com.brunodles.environmentmods.annotation.Moddable;
 
 /**
  * Created by bruno on 23/11/16.

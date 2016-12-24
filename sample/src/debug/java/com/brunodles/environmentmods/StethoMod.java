@@ -1,10 +1,7 @@
-package com.github.brunodles.environmentmods;
+package com.brunodles.environmentmods;
 
-import com.github.brunodles.environmentmods.annotation.ModFor;
+import com.brunodles.environmentmods.annotation.ModFor;
 
-/**
- * Created by bruno on 23/11/16.
- */
 public class StethoMod {
 
     @ModFor(Application.class)

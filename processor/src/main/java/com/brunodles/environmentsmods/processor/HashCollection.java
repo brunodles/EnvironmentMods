@@ -1,10 +1,7 @@
-package com.github.brunodles.environmentsmods.processor;
+package com.brunodles.environmentsmods.processor;
 
 import java.util.*;
 
-/**
- * Created by bruno on 23/11/16.
- */
 public class HashCollection<KEY, VALUE> {
     private HashMap<KEY, Collection<VALUE>> map = new HashMap<>();
 

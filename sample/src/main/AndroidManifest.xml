@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.github.brunodles.environmentmods.sample">
+          package="com.brunodles.environmentmods.sample">
 
     <application
         android:allowBackup="true"

@@ -1,4 +1,4 @@
-package com.github.brunodles.environmentmods.annotation;
+package com.brunodles.environmentmods.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

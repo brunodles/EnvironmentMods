@@ -1,4 +1,4 @@
-package com.github.brunodles.environmentmods;
+package com.brunodles.environmentmods;
 
 import org.junit.Test;
 

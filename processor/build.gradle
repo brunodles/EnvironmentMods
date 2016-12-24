@@ -50,6 +50,7 @@ dependencies {
     compile project(':annotation')
     compile 'com.github.brunodles:AnnotationProcessorHelper:1.2.0'
     compile 'com.squareup:javapoet:1.8.0'
+    compileOnly 'com.google.auto.service:auto-service:+'
 }
 
 publishing {

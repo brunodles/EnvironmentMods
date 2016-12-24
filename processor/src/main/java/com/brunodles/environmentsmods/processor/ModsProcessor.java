@@ -1,9 +1,9 @@
-package com.github.brunodles.environmentsmods.processor;
+package com.brunodles.environmentsmods.processor;
 
+import com.brunodles.environmentmods.annotation.ModFor;
+import com.brunodles.environmentmods.annotation.Moddable;
 import com.github.brunodles.annotationprocessorhelper.ProcessorBase;
 import com.github.brunodles.annotationprocessorhelper.SupportedAnnotations;
-import com.github.brunodles.environmentmods.annotation.ModFor;
-import com.github.brunodles.environmentmods.annotation.Moddable;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Set;
 
 @SupportedAnnotations({Moddable.class, ModFor.class})
+@com.google.auto.service.AutoService(javax.annotation.processing.Processor.class)
 public class ModsProcessor extends ProcessorBase {
 
     private static final String TAG = "ModsProcessor";
