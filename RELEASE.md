@@ -9,4 +9,8 @@ bintray.user=myUser
 bintray.apikey=myApiKey
 ```
 
-- In the repository folder run ```./gradlew clean bintrayUpload```
+- In the repository folder run
+```bash
+./gradlew clean install
+./gradlew bintrayUpload
+```
