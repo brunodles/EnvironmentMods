@@ -1,1 +1,1 @@
-include ':sample', ':library', ':runtime', ':annotation', ':processor'
+include ':sample', ':environmentmods-annotation', ':environmentmods-processor'

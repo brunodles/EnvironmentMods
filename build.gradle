@@ -27,11 +27,12 @@ task clean(type: Delete) {
 }
 
 ext.maven = [
-        group  : "com.github.brunodles",
-        version: rootProject.file("version").text,
-        repo   : "EnvironmentMods",
-        name   : "EnvironmentMods",
-        site   : "https://github.com/brunodles/EnvironmentMods",
-        git    : "https://github.com/brunodles/EnvironmentMods.git",
-        tag    : 'git rev-parse --abbrev-ref HEAD'.execute().text.trim()
+        group   : "com.brunodles",
+        version : rootProject.file("version").text,
+        repo    : "TempRepo",
+        name    : "EnvironmentMods",
+        artifact: "environmentmods",
+        site    : "https://github.com/brunodles/EnvironmentMods",
+        git     : "https://github.com/brunodles/EnvironmentMods.git",
+        tag     : 'git rev-parse --abbrev-ref HEAD'.execute().text.trim()
 ]
