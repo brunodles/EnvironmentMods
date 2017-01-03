@@ -2,8 +2,8 @@ package com.brunodles.environmentsmods.processor;
 
 import com.brunodles.environmentmods.annotation.ModFor;
 import com.brunodles.environmentmods.annotation.Moddable;
-import com.github.brunodles.annotationprocessorhelper.ProcessorBase;
-import com.github.brunodles.annotationprocessorhelper.SupportedAnnotations;
+import com.brunodles.annotationprocessorhelper.ProcessorBase;
+import com.brunodles.annotationprocessorhelper.SupportedAnnotations;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
