@@ -4,8 +4,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-ext.maven_publish = [
-        artifact: "$maven.artifact-annotation",
-        name    : "$maven.name Annotation"
+ext.publishingModule = [
+        artifact: "$publishingRoot.artifact-processor",
+        name    : "$publishingRoot.name Processor"
 ]
 apply from: rootProject.file('gradle/publish.gradle')
