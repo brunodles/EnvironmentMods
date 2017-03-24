@@ -5,7 +5,7 @@ dependencies {
 }
 
 ext.publishingModule = [
-        artifact: "$publishingRoot.artifact-processor",
-        name    : "$publishingRoot.name Processor"
+        artifact: "$publishingRoot.artifact-annotation",
+        name    : "$publishingRoot.name Annotation"
 ]
 apply from: rootProject.file('gradle/publish.gradle')
