@@ -110,16 +110,6 @@ we would need to find the class using reflection, which is bad for performance.
 First check if your project have *android apt*, if you don't have you can download it
 [here](https://bitbucket.org/hvisser/android-apt).
 
-In your *root level gradle file* `root/build.gradle`, add the repository.
-```gradle
-allprojects {
-    repositories {
-        ...
-        maven { url "https://raw.githubusercontent.com/brunodles/EnvironmentMods/releases/" }
-    }
-}
-```
-
 In your *module level gradle file* `root/app/build.gradle`, add these dependencies.
 ```gradle
 dependencies {
