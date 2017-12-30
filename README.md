@@ -118,7 +118,7 @@ dependencies {
     provided 'com.brunodles:environmentmods-annotation:{latest version}'
     apt 'com.brunodles:environmentmods-processor:{latest version}'
     
-    new style
+    // new style
     api 'com.brunodles:environmentmods-annotation:{latest version}'
     annotationProcessor 'com.brunodles:environmentmods-processor:{latest version}'
     
