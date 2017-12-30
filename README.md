@@ -114,8 +114,16 @@ In your *module level gradle file* `root/app/build.gradle`, add these dependenci
 ```gradle
 dependencies {
     ...
-    provided 'com.github.brunodles:environmentmods-annotation:{latest version}'
-    apt 'com.github.brunodles:environmentmods-processor:{latest version}'
+    // old style
+    provided 'com.brunodles:environmentmods-annotation:{latest version}'
+    apt 'com.brunodles:environmentmods-processor:{latest version}'
+    
+    new style
+    api 'com.brunodles:environmentmods-annotation:{latest version}'
+    annotationProcessor 'com.brunodles:environmentmods-processor:{latest version}'
+    
+    // add this line too if you use kotlin
+    kapt 'com.brunodles:environmentmods-processor:{latest version}'
 }
 ```
 
